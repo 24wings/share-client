@@ -1,0 +1,32 @@
+    #codeImg {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 100px;
+        height: 100px;
+    }
+    
+    .hide {
+        display: none;
+    }
+    
+    .header h3 {
+        padding: 0.9375rem 0;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    
+    .header {
+        margin-bottom: 20px;
+    }
+    
+    .header a {
+        color: lightsteelblue;
+    }
+    
+    .container-fluid {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }

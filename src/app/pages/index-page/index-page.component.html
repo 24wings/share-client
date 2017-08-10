@@ -1,0 +1,29 @@
+<nav class="nav">
+    <a href="/share/index">推荐</a>
+    <a href="/share/index" class="active " *ngFor="let taskTag of taskTags">{{taskTag.name}}</a>
+</nav>
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <a href="/share/taskDetail" *ngFor="let banner of banners;let i = index;">
+                <img [src]="banner.bannerImg" alt="" class=" fadeInRight" *ngIf="showingBanner==i"></a>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="animated fadeInRight">
+    <div class="center">
+
+        <a class="center-box" routerLink='/share/taskDetail' [queryParams]="{openid:user.openid,taskId:task._id}" *ngFor="let task of tasks">
+            <div class="center-box-cr">
+                <img [src]="task.imageUrl" alt="">
+                <p>{{task.title}}</p>
+                <span class="time">{{task.createDt | date:'YYYY-MM-dd'}}</span>
+                <span class="cost"><i class="iconfont">&#xe60e;</i>{{task.shareMoney}}元</span>
+                <span class="click"><i class="iconfont">&#xe662;</i>{{task.clickNum}}</span>
+            </div>
+        </a>
+    </div>
+</div>

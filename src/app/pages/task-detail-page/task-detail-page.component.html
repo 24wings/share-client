@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="header">
+        <h3>{{task.title}}</h3>
+        <h4>
+            <span>{{task.createDt  }}</span>
+            <a href="/share/index">狠享赚</a>
+        </h4>
+    </div>
+</div>
+
+
+<div id="taskTitle" class="hide">{{task.title}}</div>
+<div id="taskImage" class="hide">{{task.imageUrl}}</div>
+<div id="taskContent" class="hide">{{task.content}}</div>
+
+<div id="qrcode"></div>
+<img alt="" id="codeImg" style="display:none;">
+<!-- <button onclick="toggleQrcode()" style="width:70px;height:70px;border-radius:50%;background:#a3d4ff;color:#fff;position:fixed;bottom:80px;right:30px;border:none;">显示二维码</button> -->
+<h1>{{task.websiteUrl}}</h1>
+<iframe [src]="task.websiteUrl" style="width:100vw;height:100vh;border:none;"></iframe>
